@@ -1,6 +1,4 @@
-<<?php
-
-session_start();
+<?php
 
 $username = $_REQUEST['username'];
 $password = $_REQUEST['password'];
@@ -11,16 +9,10 @@ if ($username == null || $password == null || $email == null) {
 }
 else {
    $data = $username."|".$password."|".$email."\r\n";
-   $file =fopen ('../model/user.txt','a');
+   $file =fopen ('user.txt','a');
    fwrite($file,$data);
-
-   if ($name == "create") {
-    header(location:index.html);
-   }
-   else{
-   header(location:login.html);
-    
-   }
+    header('location: login.html');
+  
     
    }
 

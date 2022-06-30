@@ -9,7 +9,7 @@ if ($username == null || $password == null) {
     echo "Invalid Username/Password !!!";
 }
 else {
-    $file = fopen('../model/user.txt','r');
+    $file = fopen('user.txt','r');
     while (!feof($file)) {
         $line = fgets($file);
         $user = explode('|', $line);
@@ -17,7 +17,7 @@ else {
 
         if ($username == trim($user[0]) && $password ==trim($user[1])) {
             setcookie('status', 'true', time()+3600,'/');
-            header('location: ../view/profile.html');
+            header('location:profile.html');
         }
     }
 
