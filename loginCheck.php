@@ -14,9 +14,9 @@ else {
         $user = explode('|', $line);
         echo "<br>";
 
-        if ($username == trim($user[0]) && $password ==trim($user[1])) {
+        if ($username == trim($user[1]) && $password ==trim($user[2])) {
             setcookie('status', 'true', time()+3600,'/');
-            header('location:profile.html');
+            header('location:profile.php');
         }
     }
 
