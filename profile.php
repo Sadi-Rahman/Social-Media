@@ -12,7 +12,7 @@
   <body>
     <h1>Welcome to the Profile Page</h1>
     <br />
-    <a href="index.html">Homepage</a> | <a href="about.html">About Us</a> |
+    <a href="home.php">Homepage</a> | <a href="about.html">About Us</a> |
     <a href="logout.html">Logout</a> <br />
     <br />
 
@@ -55,7 +55,7 @@
           ></textarea
           ><br /><br />
         </td>
-        <td><input type="submit" value="Post" /></td>
+        <td><input type="submit" name="Post" value="Post" /></td>
         <hr />
       </tr>
     </form>
