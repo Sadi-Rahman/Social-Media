@@ -11,7 +11,7 @@
 
   <body>
     <h1>Welcome to the Homepage</h1>
-    <a href="profile.html">Profile</a><br />
+    <a href="profile.php">Profile</a><br />
     <a href="about.html">About Us</a><br />
     <a href="logout.html">Logout</a><br />
 
@@ -24,7 +24,7 @@
 					
 			?>
     <tr>
-				<th><?=$post?></th>
+				<th><?=$post	?></th>
 				
 			
 	 
