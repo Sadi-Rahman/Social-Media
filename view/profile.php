@@ -9,29 +9,28 @@
     <title>Profile Page</title>
   </head>
 
-  <body>
+  <body background="../back2.jpg">
     <h1>Welcome to the Profile Page</h1>
     <br />
     <a href="home.php">Homepage</a> | <a href="about.html">About Us</a> |
-    <a href="logout.html">Logout</a> <br />
+    <a href="../controller/logout.php">Logout</a> <br />
     <br />
 
-    <form>
+    <form method="post" action="fileupload.php" enctype="multipart/form-data">
       <tr>
         <td>Upload Profile Picture</td>
         <br /><br />
-        <input type="file" id="myFile" name="filename" /><br /><br />
+        <input type="file" name="myfile" value=""><br /><br />
         <input type="submit" value="Upload" /><br>
 
       <?php 
-				$file = fopen('user.txt', 'r');
+				$file = fopen('../model/user.txt', 'r');
 				while(!feof($file)){
 					$user = fgets($file);
 					$user = explode("|", $user);
 					//print_r($user);
 					if(count($user) > 1){
 			?>
-      
 				
       <?php
 
@@ -43,7 +42,7 @@
         <br /><br />
       </tr>
     </form>
-    <form action="post.php" method="post" enctype="">
+    <form action="../controller/post.php" method="post" enctype="">
       <tr>
         <td>
           <textarea

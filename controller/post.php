@@ -13,7 +13,7 @@ else {
    $data = $ques."\r\n";
    $file =fopen ('post.txt','a');
    fwrite($file,$data);
-   header('location: home.php');
+   header('location: ../view/home.php');
   
    
     

@@ -4,21 +4,21 @@
     <title>Homepage</title>
   </head>
 
-  <body>
+  <body background="../back2.jpg">
     <h1>Welcome to the Homepage</h1>
-    <a href="profile.php">Profile</a><br />
-    <a href="about.html">About Us</a><br />
-    <a href="logout.html">Logout</a><br /><br><br>
+    <a href="profile.php">Profile</a> | 
+    <a href="about.html">About Us</a> | 
+    <a href="../controller/logout.php">Logout</a><br /><br><br>
 
 			<?php 
-				$file = fopen('post.txt', 'r');
+				$file = fopen('../controller/post.txt', 'r');
 				while(!feof($file)){
 					$post = fgets($file);
 					$post = ($post);
 					//print_r($user);
 					
 			?>
-			<table  border="1px" style="border-collapse: collapse">
+			<table  border="1px" style="border-collapse: collapse" width="5">
     		<tr>
 			<td><?=$post	?></td><br>
 			</tr>

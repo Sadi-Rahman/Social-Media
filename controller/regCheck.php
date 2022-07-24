@@ -11,9 +11,9 @@ if ($username == null || $password == null || $email == null) {
 }
 else {
    $data = $username."|".$password."|".$email."|".$tel."|".$address."\r\n";
-   $file =fopen ('user.txt','a');
+   $file =fopen ('../model/user.txt','a');
    fwrite($file,$data);
-    header('location: login.html');
+    header('location: ../view/login.html');
   
     
    }
